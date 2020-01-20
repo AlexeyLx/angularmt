@@ -9,17 +9,17 @@ interface moviesTop {
  
  
 @Component({
-  selector: 'app-dialog-box',
-  templateUrl: './dialog-box.component.html',
-  styleUrls: ['./dialog-box.component.css']
+  selector: 'app-matdialog',
+  templateUrl: './matdialog.component.html',
+  styleUrls: ['./matdialog.component.css']
 })
-export class DialogBoxComponent {
+export class MatDialog {
  
   action:string;
   local_data:any;
  
   constructor(
-    public dialogRef: MatDialogRef<DialogBoxComponent>,
+    public dialogRef: MatDialogRef<MatDialog>,
     //@Optional() is used to prevent error if no data is passed
     @Optional() @Inject(MAT_DIALOG_DATA) public data: moviesTop) {
     console.log(data);

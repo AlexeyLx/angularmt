@@ -16,13 +16,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
 import { HttpClientModule }   from '@angular/common/http';
-import { DialogBoxComponent } from './dialog-box/dialog-box.component';
+import { MatDialog } from './matdialog/matdialog.component';
  
 @NgModule({
   declarations: [
     AppComponent,
     MaterialTableComponent,
-    DialogBoxComponent
+    MatDialog
   ],
   imports: [
     BrowserModule,
@@ -46,7 +46,7 @@ import { DialogBoxComponent } from './dialog-box/dialog-box.component';
     HttpClientModule
   ],
   entryComponents: [
-    DialogBoxComponent
+    MatDialog
   ],
   providers: [],
   bootstrap: [AppComponent]

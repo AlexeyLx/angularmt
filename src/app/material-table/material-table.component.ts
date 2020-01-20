@@ -4,7 +4,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Movie } from 'src/app/movie';
 import { HttpClient } from '@angular/common/http';
-import { DialogBoxComponent } from './dialog-box/dialog-box.component';
+// import { MatDialog } from './matdialog/matdialog.component';
 import { MatDialog, MatTable } from '@angular/material';
 
 interface moviesTop {
@@ -64,7 +64,7 @@ export class MaterialTableComponent implements OnInit {
 
   openDialog(action,obj) {
     obj.action = action;
-    const dialogRef = this.dialog.open(DialogBoxComponent, {
+    const dialogRef = this.dialog.open(MatDialog, {
       width: '150px',
       data:obj
     });
