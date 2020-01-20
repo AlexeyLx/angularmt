@@ -42,13 +42,13 @@ export class MaterialTableComponent implements OnInit {
 
  
   moviesTop: MatTableDataSource<moviesTop>;
-  displayedColumnsOne: string[] = ['rank', 'title', 'cash'];
+  displayedColumnsOne: string[] = ['rank', 'title', 'cash', 'action'];
   @ViewChild('TableOnePaginator', {static: true}) tableOnePaginator: MatPaginator;
   @ViewChild('TableOneSort', {static: true}) tableOneSort: MatSort;
  
  
   moviesOskar: MatTableDataSource<moviesOskar>;
-  displayedColumnsTwo: string[] = ['oskar', 'title', 'cash'];
+  displayedColumnsTwo: string[] = ['oskar', 'title', 'cash', 'action'];
   @ViewChild('TableTwoPaginator', {static: true}) tableTwoPaginator: MatPaginator;
   @ViewChild('TableTwoSort', {static: true}) tableTwoSort: MatSort;
  

@@ -12,7 +12,7 @@
       [dataSource]="moviesTop"
       #TableOneSort="matSort"
       class="mat-elevation-z8"
-      style="width: 100%;"
+      style="width: 60%;"
     >
       <!--- Note that these columns can be defined in any order.
               The actual rendered columns are set as a property on the row definition" -->
@@ -34,6 +34,15 @@
         <th mat-header-cell *matHeaderCellDef mat-sort-header>Cash</th>
         <td mat-cell *matCellDef="let element">{{ element.cash }}</td>
       </ng-container>
+
+      <!-- Action Column -->
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef> Action </th>
+        <td mat-cell *matCellDef="let element" class="action-link"> 
+          <a (click)="openDialog('Update',element)">Edit</a> | 
+          <a (click)="openDialog('Delete',element)">Delete</a>  
+        </td>
+      </ng-container>
    
       <tr mat-header-row *matHeaderRowDef="displayedColumnsOne"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumnsOne"></tr>
@@ -43,6 +52,7 @@
       #TableOnePaginator="matPaginator"
       [pageSize]="3"
       [pageSizeOptions]="[5, 10, 25, 100]"
+      style="width: 60%;"
     ></mat-paginator>
    
     <mat-form-field>
@@ -58,7 +68,7 @@
       [dataSource]="moviesOskar"
       #TableTwoSort="matSort"
       class="mat-elevation-z8"
-      style="width: 100%;"
+      style="width: 60%;"
     >
       <!--- Note that these columns can be defined in any order.
                   The actual rendered columns are set as a property on the row definition" -->
@@ -80,6 +90,15 @@
         <th mat-header-cell *matHeaderCellDef mat-sort-header>Cash</th>
         <td mat-cell *matCellDef="let element">{{ element.cash }}</td>
       </ng-container>
+
+      <!-- Action Column -->
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef> Action </th>
+        <td mat-cell *matCellDef="let element" class="action-link"> 
+          <a (click)="openDialog('Update',element)">Edit</a> | 
+          <a (click)="openDialog('Delete',element)">Delete</a>  
+        </td>
+      </ng-container>
    
       <tr mat-header-row *matHeaderRowDef="displayedColumnsTwo"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumnsTwo"></tr>
@@ -89,5 +108,6 @@
       #TableTwoPaginator="matPaginator"
       [pageSize]="3"
       [pageSizeOptions]="[5, 10, 25, 100]"
+      style="width: 60%;"
     ></mat-paginator>
   </div>
