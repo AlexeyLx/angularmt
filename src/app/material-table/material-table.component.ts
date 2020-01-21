@@ -32,9 +32,9 @@ const ELEMENT_DATA1: moviesTop[] = [
 const ELEMENT_DATA2: moviesOskar[] = [
   {id: 6, oskar: 1, title: 'Fight Club', cash: 10079},
   {id: 7, oskar: 2, title: 'One Flew Over the Cuckoos Nest', cash: 40026},
-  {id: 8, oskar: 3, title: 'The Matrix', cash: 6941},
-  {id: 9, oskar: 4, title: 'The Silence of the Lambs', cash: 90122},
-  {id: 10, oskar: 5, title: 'Casablanca', cash: 10811}
+  {id: 8, oskar: 2, title: 'The Matrix', cash: 6941},
+  {id: 9, oskar: 1, title: 'The Silence of the Lambs', cash: 90122},
+  {id: 10, oskar: 2, title: 'Casablanca', cash: 10811}
 ];
  
 @Component({
